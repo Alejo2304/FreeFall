@@ -41,7 +41,7 @@ ballrect = ball.get_rect() #It obtains the rectangle of the ball.gif after its c
 
 
 #-----GLOBAL VARIABLES-----
-FONT_ARIAL = pygame.font.SysFont("Arial", 20)
+FONT_ARIAL = pygame.font.SysFont("Arial", 40)
 GRAVITY = 9.806
 #-----VARIABLES----- 
 h = t = i = 0 #initializes the variables.
@@ -69,7 +69,7 @@ i = 0 #restart value if iterator to 0.
 #while True: 
 for data in reversed(freeFall):
 
-    #-----Text to show in screen ------
+    #-----Text to show in screen ------/
     strV = "Velocidad: "+str(freeFall[i][0])+" m/s2." #Save an string with the message
     txtV = FONT_ARIAL.render(strV, True, colors["GREEN"]) #Render the message with the font and color. 
     strH = "Altura:    "+str(data[1])+" meter."
@@ -86,8 +86,8 @@ for data in reversed(freeFall):
     screen.blit(ball, (mtr[0],mtr[1]-ballrect.height))
 
     screen.blit(txtH, (0,20))
-    screen.blit(txtV, (0,40))
-    screen.blit(txtT, (0,60))
+    screen.blit(txtV, (0,60))
+    screen.blit(txtT, (0,100))
     #-----ZONA DE DIBUJO-----
     pygame.display.flip()
     time.sleep(0.1)
